@@ -714,8 +714,14 @@ impl Context {
             if let Some(catch) = &try_statement.catch {
               self.switch_scope(Some(Rc::clone(&self.cur_scope)));
               if let Some(error_decl) =&catch.declaration {
-                let err_obj = err.to_error_object(self);
-                (*self.cur_scope).borrow_mut().set_value(error_decl.literal.clone(), Value::Object(err_obj), false);
+                // 如果 throw 有显式的值，直接使用该值而不包装成对象
+                let catch_value = if let Some(throw_value) = &err.value {
+                  throw_value.clone()
+                } else {
+                  let err_obj = err.to_error_object(self);
+                  Value::Object(err_obj)
+                };
+                (*self.cur_scope).borrow_mut().set_value(error_decl.literal.clone(), catch_value, false);
               }
               let result = self.call_block(&vec![], &catch.body.statements)?;
               (*result_value) = result.0;
@@ -1009,13 +1015,54 @@ impl Context {
         },
         Token::In => {
           let key = left.to_string(self);
+          // in 运算符需要遍历原型链
+          fn has_property_in_chain(ctx: &mut Context, obj_rc: Rc<RefCell<Object>>, key: &str) -> bool {
+            if obj_rc.borrow().property.contains_key(key) {
+              return true;
+            }
+            // 检查原型链 - 通过 __proto__ 属性获取
+            let proto = obj_rc.borrow().get_inner_property_value(crate::constants::PROTO_PROPERTY_NAME.to_string());
+            let current_proto: Option<Rc<RefCell<Object>>> = match proto {
+              Some(Value::RefObject(weak)) => {
+                if let Some(obj_rc) = weak.upgrade() {
+                  Some(obj_rc)
+                } else {
+                  None
+                }
+              },
+              Some(Value::Object(obj_rc)) => Some(obj_rc),
+              _ => None,
+            };
+            if let Some(proto_rc) = current_proto {
+              return has_property_in_chain(ctx, proto_rc, key);
+            }
+            false
+          }
           match &right {
             Value::Object(obj_rc) => {
-              Ok(Value::Boolean(obj_rc.borrow().property.contains_key(&key)))
+              Ok(Value::Boolean(has_property_in_chain(self, Rc::clone(obj_rc), &key)))
+            },
+            Value::Array(obj_rc) => {
+              Ok(Value::Boolean(has_property_in_chain(self, Rc::clone(obj_rc), &key)))
+            },
+            Value::Function(obj_rc) => {
+              Ok(Value::Boolean(has_property_in_chain(self, Rc::clone(obj_rc), &key)))
+            },
+            Value::Promise(obj_rc) => {
+              Ok(Value::Boolean(has_property_in_chain(self, Rc::clone(obj_rc), &key)))
+            },
+            Value::StringObj(obj_rc) => {
+              Ok(Value::Boolean(has_property_in_chain(self, Rc::clone(obj_rc), &key)))
+            },
+            Value::NumberObj(obj_rc) => {
+              Ok(Value::Boolean(has_property_in_chain(self, Rc::clone(obj_rc), &key)))
+            },
+            Value::BooleanObj(obj_rc) => {
+              Ok(Value::Boolean(has_property_in_chain(self, Rc::clone(obj_rc), &key)))
             },
             Value::RefObject(weak) => {
               if let Some(obj_rc) = weak.upgrade() {
-                Ok(Value::Boolean(obj_rc.borrow().property.contains_key(&key)))
+                Ok(Value::Boolean(has_property_in_chain(self, obj_rc, &key)))
               } else {
                 Ok(Value::Boolean(false))
               }
@@ -1821,13 +1868,24 @@ impl Context {
 
       // new function
       if let Value::Function(function_declare) = &constructor.value {
-       
+        // 首先从 property map 中读取 prototype（支持用户自定义 prototype）
         let prototype = {
           let func_clone = Rc::clone(function_declare);
           let func_borrow = func_clone.borrow();
-          func_borrow.prototype.clone()
+          // 优先从 property map 中读取 prototype，支持用户自定义 prototype 赋值
+          if let Some(prop_value) = func_borrow.property.get("prototype") {
+            match &prop_value.value {
+              Value::Object(obj_rc) => Some(Rc::clone(obj_rc)),
+              Value::Array(obj_rc) => Some(Rc::clone(obj_rc)),
+              Value::Function(obj_rc) => Some(Rc::clone(obj_rc)),
+              Value::RefObject(weak) => weak.upgrade(),
+              _ => func_borrow.prototype.clone(),
+            }
+          } else {
+            func_borrow.prototype.clone()
+          }
         };
-        
+
         if let Some(proto) = prototype {
           let obj = create_object(self, ClassType::Object, None);
            // 绑定当前对象的原型
@@ -1836,7 +1894,7 @@ impl Context {
             let mut obj_borrowed = obj_clone.borrow_mut();
             obj_borrowed.set_inner_property_value(PROTO_PROPERTY_NAME.to_string(), Value::RefObject(Rc::downgrade(&proto)));
            }
-           
+
            // 执行构造函数
           self.call_function_object(Rc::clone(function_declare), Some(Value::Object(Rc::clone(&obj))), None, arguments)?;
           return Ok(Value::Object(obj))

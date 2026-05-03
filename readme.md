@@ -2,19 +2,18 @@
 
 JSI is a JavaScript interpreter written in Rust that supports bytecode similar to quickjs.
 
-
-<img src="https://img.shields.io/badge/Test262-6683%20Passed-brightgreen.svg" alt="test262 passed" />
-<img src="https://img.shields.io/badge/Test262-48659%20Total-blue.svg" alt="test262 total" />
+<img src="https://img.shields.io/badge/Test262-6820%20Passed-brightgreen.svg" alt="test262 passed" /> <img src="https://img.shields.io/badge/Test262-48659%20Total-blue.svg" alt="test262 total" /> <img src="https://img.shields.io/badge/ES%201-100%%20Pass-blue.svg" alt="test262 total" /> <img src="https://img.shields.io/badge/ES%203-100%%20Pass-blue.svg" alt="test262 total" />
 
 ---
 
 ### Usage
 
 #### Basic
-
+  
 
 ```rust
 use jsi::JSI;
+use jsi::Value;
 
 let mut jsi = JSI::new();
 
@@ -48,7 +47,7 @@ let result2 = jsi.run_with_bytecode(String::from("\
   let b = 'abc';
   a + b
   ")).unwrap();
-assert_eq!(result , Value::String(String::from("123abc")));
+assert_eq!(result2 , Value::String(String::from("123abc")));
 ```
 
 

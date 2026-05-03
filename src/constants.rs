@@ -8,11 +8,12 @@ pub const GLOBAL_FUNCTION_NAME: &str = "Function";
 
 // more
 pub const GLOBAL_PROMISE_NAME: &str = "Promise";
+pub const GLOBAL_REGEXP_NAME: &str = "RegExp";
 
 pub const GLOBAL_ERROR_NAME: &str = "Error";
 pub const GLOBAL_TYPE_ERROR_NAME: &str = "TypeError";
 
-pub const GLOBAL_OBJECT_NAME_LIST: [&str;9] = [
+pub const GLOBAL_OBJECT_NAME_LIST: [&str;10] = [
     GLOBAL_NUMBER_NAME,
     GLOBAL_STRING_NAME,
     GLOBAL_BOOLEAN_NAME,
@@ -21,6 +22,7 @@ pub const GLOBAL_OBJECT_NAME_LIST: [&str;9] = [
     GLOBAL_ARRAY_NAME,
     GLOBAL_FUNCTION_NAME,
     GLOBAL_PROMISE_NAME,
+    GLOBAL_REGEXP_NAME,
     // Error
     GLOBAL_ERROR_NAME,
     GLOBAL_TYPE_ERROR_NAME,

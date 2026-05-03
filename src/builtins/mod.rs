@@ -8,3 +8,4 @@ pub mod promise;
 pub mod error;
 pub mod global;
 pub mod console;
+pub mod regexp;

@@ -33,14 +33,26 @@ pub fn bind_global_error(ctx: &mut Context, error_type: &str) {
   let error_rc = get_global_object_by_name(ctx, error_type);
   let mut error = (*error_rc).borrow_mut();
   error.set_inner_property_value(INSTANTIATE_OBJECT_METHOD_NAME.to_string(), create_function);
-  if error_type != GLOBAL_ERROR_NAME {
-    return
-  }
+
+  // 在 prototype 上设置 name 属性
+  let error_name = if error_type == GLOBAL_ERROR_NAME {
+    "Error"
+  } else if error_type == GLOBAL_TYPE_ERROR_NAME {
+    "TypeError"
+  } else {
+    // 提取错误名称，例如 "ReferenceError"
+    error_type.strip_suffix("Constructor").unwrap_or(error_type)
+  };
+
   if let Some(prop)= &error.prototype {
     let prototype_rc = Rc::clone(prop);
     let mut prototype = prototype_rc.borrow_mut();
-    let name = String::from("toString");
-    prototype.define_property(name.clone(), Property { enumerable: true, value: builtin_function(ctx, name, 0f64, to_string) });
+    prototype.define_property(String::from("name"), Property { enumerable: false, value: Value::String(error_name.to_string()) });
+
+    if error_type == GLOBAL_ERROR_NAME {
+      let name = String::from("toString");
+      prototype.define_property(name.clone(), Property { enumerable: true, value: builtin_function(ctx, name, 0f64, to_string) });
+    }
   }
 }
 
