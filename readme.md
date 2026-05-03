@@ -2,7 +2,7 @@
 
 JSI is a JavaScript interpreter written in Rust that supports bytecode similar to quickjs.
 
-<img src="https://img.shields.io/badge/Test262-6820%20Passed-brightgreen.svg" alt="test262 passed" /> <img src="https://img.shields.io/badge/Test262-48659%20Total-blue.svg" alt="test262 total" /> <img src="https://img.shields.io/badge/ES%201-100%%20Pass-blue.svg" alt="test262 total" /> <img src="https://img.shields.io/badge/ES%203-100%%20Pass-blue.svg" alt="test262 total" />
+<img src="https://img.shields.io/badge/Test262-6820%20Passed-brightgreen.svg" alt="test262 passed" /> <img src="https://img.shields.io/badge/Test262-48659%20Total-blue.svg" alt="test262 total" /> <img src="https://img.shields.io/badge/ES%201-All%20Pass-blue.svg" alt="es1 100%" /> <img src="https://img.shields.io/badge/ES%203-All%20Pass-blue.svg" alt="es3  pass" />
 
 ---
 
