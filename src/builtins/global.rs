@@ -4,7 +4,7 @@ use std::rc::{Rc};
 use crate::ast_node::{ClassType, CallContext};
 use crate::builtins::promise::bind_global_promise;
 use crate::builtins::regexp::bind_global_regexp;
-use crate::constants::{GLOBAL_OBJECT_NAME_LIST, GLOBAL_OBJECT_NAME, PROTO_PROPERTY_NAME, GLOBAL_ERROR_NAME, GLOBAL_TYPE_ERROR_NAME};
+use crate::constants::{GLOBAL_OBJECT_NAME_LIST, GLOBAL_OBJECT_NAME, PROTO_PROPERTY_NAME, GLOBAL_ERROR_NAME, GLOBAL_TYPE_ERROR_NAME, GLOBAL_JSON_NAME, GLOBAL_DATE_NAME};
 use crate::value::Value;
 use crate::context::{Context};
 use crate::error::{JSIResult, JSIError, JSIErrorType};
@@ -15,6 +15,8 @@ use super::function::{bind_global_function, builtin_function};
 use super::number::bind_global_number;
 use super::object::{Object, Property, bind_global_object};
 use super::string::bind_global_string;
+use super::json::bind_global_json;
+use super::date::bind_global_date;
 
 pub const IS_GLOABL_OBJECT: &str = "isGlobal";
 
@@ -108,6 +110,10 @@ pub fn bind_global(ctx: &mut Context) {
   bind_global_promise(ctx);
   // 绑定 RegExp 的 静态方法 和 原型链方法
   bind_global_regexp(ctx);
+  // 绑定 JSON 的 静态方法
+  bind_global_json(ctx);
+  // 绑定 Date 的 静态方法
+  bind_global_date(ctx);
   // 绑定  Error 的 静态方法 和 原型链方法
   bind_global_error(ctx, GLOBAL_ERROR_NAME);
   bind_global_error(ctx, GLOBAL_TYPE_ERROR_NAME);

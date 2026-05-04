@@ -12,8 +12,10 @@ pub const GLOBAL_REGEXP_NAME: &str = "RegExp";
 
 pub const GLOBAL_ERROR_NAME: &str = "Error";
 pub const GLOBAL_TYPE_ERROR_NAME: &str = "TypeError";
+pub const GLOBAL_JSON_NAME: &str = "JSON";
+pub const GLOBAL_DATE_NAME: &str = "Date";
 
-pub const GLOBAL_OBJECT_NAME_LIST: [&str;10] = [
+pub const GLOBAL_OBJECT_NAME_LIST: [&str;12] = [
     GLOBAL_NUMBER_NAME,
     GLOBAL_STRING_NAME,
     GLOBAL_BOOLEAN_NAME,
@@ -23,6 +25,8 @@ pub const GLOBAL_OBJECT_NAME_LIST: [&str;10] = [
     GLOBAL_FUNCTION_NAME,
     GLOBAL_PROMISE_NAME,
     GLOBAL_REGEXP_NAME,
+    GLOBAL_JSON_NAME,
+    GLOBAL_DATE_NAME,
     // Error
     GLOBAL_ERROR_NAME,
     GLOBAL_TYPE_ERROR_NAME,

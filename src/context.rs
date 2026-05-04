@@ -1974,6 +1974,26 @@ impl Context {
           }
         }
       };
+
+      // 处理绑定的参数 (bind)
+      let mut final_args = args;
+      if let Some(bound_args_value) = (*function_define).borrow().get_inner_property_value(String::from("bound_args")) {
+        if let Value::Array(arr_obj) = bound_args_value {
+          let arr = arr_obj.borrow();
+          if let Value::Number(len) = arr.get_property_value(String::from("length")) {
+            let mut bound_args: Vec<ValueInfo> = Vec::new();
+            for i in 0..(len as usize) {
+              let val = arr.get_property_value(i.to_string());
+              if !matches!(val, Value::Undefined) {
+                bound_args.push(val.to_value_info());
+              }
+            }
+            bound_args.extend(final_args);
+            final_args = bound_args;
+          }
+        }
+      }
+
       // 内置方法
       if let Statement::BuiltinFunction(builtin_function) = *function_define_value.clone() {
         let func_name = get_builtin_function_name(self, &function_define);
@@ -1983,7 +2003,7 @@ impl Context {
           reference: Some(Rc::downgrade(&function_define)),
           func_name,
         };
-        let arguments = args.iter().map(|info| info.value.clone()).collect::<Vec<Value>>();
+        let arguments = final_args.iter().map(|info| info.value.clone()).collect::<Vec<Value>>();
         let builtin_res = (builtin_function)(&mut ctx, arguments)?;
         self.stack.push(builtin_res.to_value_info());
         return Ok(Value::Undefined);
@@ -2019,9 +2039,9 @@ impl Context {
       {
         let argument_object_rc = Rc::clone(&argument_object);
         let mut argument_object_mut = argument_object_rc.borrow_mut();
-        argument_object_mut.define_property(String::from("length"),  Property { enumerable: false, value: Value::Number(args.len() as f64) });
+        argument_object_mut.define_property(String::from("length"),  Property { enumerable: false, value: Value::Number(final_args.len() as f64) });
         let mut arguments_index = 0;
-        for value_info in args.iter() {
+        for value_info in final_args.iter() {
           argument_object_mut.define_property(arguments_index.to_string(), Property { enumerable: true, value: value_info.value.clone() });
           arguments_index += 1
         }
@@ -2032,11 +2052,11 @@ impl Context {
 
       if use_bytecode_execution {
         // 使用 bytecode 执行（常规函数）
-        (*self.cur_scope).borrow_mut().function_call_args = args.clone();
+        (*self.cur_scope).borrow_mut().function_call_args = final_args.clone();
         let _ =  self.run_with_bytecode_list(0, &bytecode_list);
       } else if let Some(ref func_decl) = function_declaration {
         // 使用 function declaration 执行（箭头函数）
-        let arguments: Vec<Value> = args.iter().map(|info| info.value.clone()).collect();
+        let arguments: Vec<Value> = final_args.iter().map(|info| info.value.clone()).collect();
         // 绑定参数
         for parameter_index in 0..func_decl.parameters.len() {
           if parameter_index < arguments.len() {

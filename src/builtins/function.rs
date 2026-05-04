@@ -198,13 +198,29 @@ fn function_call(call_ctx: &mut CallContext, args: Vec<Value>) -> JSIResult<Valu
 // Function.prototype.bind
 fn function_bind(ctx: &mut CallContext, args: Vec<Value>) -> JSIResult<Value> {
   let mut this = Value::Undefined;
+  let mut bound_args: Vec<Value> = Vec::new();
   if args.len() > 0 {
     this = args[0].clone();
+    if args.len() > 1 {
+      bound_args = args[1..].to_vec();
+    }
   }
   if let Value::Function(function_object) = &ctx.this {
     let fun_obj = function_object.borrow();
     let mut new_fun = fun_obj.force_copy();
     new_fun.set_inner_property_value(String::from("this"), this);
+
+    // 创建 bound_args 数组对象
+    let arr_obj = Rc::new(RefCell::new(Object::new(ClassType::Array, None)));
+    {
+      let mut arr = arr_obj.borrow_mut();
+      for (i, arg) in bound_args.iter().enumerate() {
+        arr.define_property(i.to_string(), Property { enumerable: true, value: arg.clone() });
+      }
+      arr.define_property(String::from("length"), Property { enumerable: false, value: Value::Number(bound_args.len() as f64) });
+    }
+    new_fun.set_inner_property_value(String::from("bound_args"), Value::Array(arr_obj));
+
     Ok(Value::Function(Rc::new(RefCell::new(new_fun))))
   } else {
     Err(JSIError::new(JSIErrorType::TypeError, format!("Bind must be called on a function

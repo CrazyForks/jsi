@@ -134,21 +134,28 @@ pub fn bind_global_array(ctx: &mut Context) {
     prototype.define_builtin_function_property(ctx, String::from("sort"),  1, array_sort);
     prototype.define_builtin_function_property(ctx, String::from("slice"),  2, array_slice);
     prototype.define_builtin_function_property(ctx, String::from("splice"),  2, array_splice);
+    prototype.define_builtin_function_property(ctx, String::from("lastIndexOf"),  1, array_last_index_of);
+    prototype.define_builtin_function_property(ctx, String::from("every"),  1, array_every);
+    prototype.define_builtin_function_property(ctx, String::from("some"),  1, array_some);
+    prototype.define_builtin_function_property(ctx, String::from("reduce"),  1, array_reduce);
   }
 }
 
 // Array.isArray
-fn array_static_is_array(call_ctx: &mut CallContext, _: Vec<Value>) -> JSIResult<Value> {
-  match &call_ctx.this {
+fn array_static_is_array(_: &mut CallContext, args: Vec<Value>) -> JSIResult<Value> {
+  if args.is_empty() {
+    return Ok(Value::Boolean(false));
+  }
+  match &args[0] {
     Value::Array(array) => {
-      let arrborrowed =  array.borrow();
-      if let  ClassType::Array = arrborrowed.class_type {
+      let arrborrowed = array.borrow();
+      if let ClassType::Array = arrborrowed.class_type {
         Ok(Value::Boolean(true))
       } else {
         Ok(Value::Boolean(false))
       }
     },
-    _ =>  Ok(Value::Boolean(false)),
+    _ => Ok(Value::Boolean(false)),
   }
 }
 
@@ -1481,4 +1488,256 @@ fn array_splice(call_ctx: &mut CallContext, args: Vec<Value>) -> JSIResult<Value
   }
 
   Ok(create_array(call_ctx.ctx, 0))
+}
+
+// Array.prototype.lastIndexOf
+fn array_last_index_of(call_ctx: &mut CallContext, args: Vec<Value>) -> JSIResult<Value> {
+  let search_element = if args.len() > 0 {
+    args[0].clone()
+  } else {
+    return Ok(Value::Number(-1f64));
+  };
+
+  let this_array_obj = get_array_object_from_this(&call_ctx.this);
+  if let Some(this_ref) = this_array_obj {
+    let this = this_ref.borrow();
+    let len = this.get_property_value(String::from("length"));
+    if let Value::Number(len) = len {
+      let len_u64 = len as u64;
+
+      let mut from_index: i64 = if len_u64 == 0 { 0 } else { len_u64 as i64 - 1 };
+      if args.len() > 1 {
+        if let Some(pos) = args[1].to_number(call_ctx.ctx) {
+          if pos.is_nan() {
+            from_index = len_u64 as i64 - 1;
+          } else {
+            let pos_i64 = pos as i64;
+            if pos_i64 >= 0 {
+              from_index = pos_i64.min(len_u64 as i64 - 1);
+            } else {
+              let neg_start = len_u64 as i64 + pos_i64;
+              from_index = if neg_start < 0 { -1 } else { neg_start };
+            }
+          }
+        }
+      }
+
+      if from_index < 0 {
+        return Ok(Value::Number(-1f64));
+      }
+
+      for index in (0..=from_index as u64).rev() {
+        let element = this.get_property_value(index.to_string());
+        if matches!(element, Value::Undefined) {
+          continue;
+        }
+        if element.is_equal_to(call_ctx.ctx, &search_element, true) {
+          return Ok(Value::Number(index as f64));
+        }
+      }
+    }
+  }
+
+  Ok(Value::Number(-1f64))
+}
+
+// Array.prototype.every
+fn array_every(call_ctx: &mut CallContext, args: Vec<Value>) -> JSIResult<Value> {
+  let callback = if args.len() > 0 {
+    &args[0]
+  } else {
+    return Ok(Value::Boolean(true));
+  };
+
+  let callback_func = match callback {
+    Value::Function(func) => Rc::clone(func),
+    _ => return Err(JSIError::new(JSIErrorType::TypeError, format!("Array.prototype.every callback must be a function"), 0, 0))
+  };
+
+  let this_array_obj = get_array_object_from_this(&call_ctx.this);
+  let len = if let Some(this_ref) = this_array_obj {
+    let this = this_ref.borrow();
+    let len = this.get_property_value(String::from("length"));
+    if let Value::Number(len) = len {
+      len as u64
+    } else {
+      return Ok(Value::Boolean(true));
+    }
+  } else {
+    return Ok(Value::Boolean(true));
+  };
+
+  let this_value = call_ctx.this.clone();
+  let this_ref = get_array_object_from_this(&call_ctx.this).unwrap();
+
+  let this_arg = if args.len() > 1 {
+    Some(args[1].clone())
+  } else {
+    None
+  };
+
+  for index in 0..len {
+    let this_borrowed = this_ref.borrow();
+    let element = this_borrowed.get_property_value(index.to_string());
+    if matches!(element, Value::Undefined) {
+      drop(this_borrowed);
+      continue;
+    }
+
+    let callback_args: Vec<crate::value::ValueInfo> = vec![
+      element.to_value_info(),
+      Value::Number(index as f64).to_value_info(),
+      this_value.to_value_info()
+    ];
+    drop(this_borrowed);
+
+    call_ctx.ctx.call_function_with_bytecode(callback_func.clone(), None, None, callback_args)?;
+    let result = call_ctx.ctx.pop_stack_value();
+
+    if !result.to_boolean(call_ctx.ctx) {
+      return Ok(Value::Boolean(false));
+    }
+  }
+
+  Ok(Value::Boolean(true))
+}
+
+// Array.prototype.some
+fn array_some(call_ctx: &mut CallContext, args: Vec<Value>) -> JSIResult<Value> {
+  let callback = if args.len() > 0 {
+    &args[0]
+  } else {
+    return Ok(Value::Boolean(false));
+  };
+
+  let callback_func = match callback {
+    Value::Function(func) => Rc::clone(func),
+    _ => return Err(JSIError::new(JSIErrorType::TypeError, format!("Array.prototype.some callback must be a function"), 0, 0))
+  };
+
+  let this_array_obj = get_array_object_from_this(&call_ctx.this);
+  let len = if let Some(this_ref) = this_array_obj {
+    let this = this_ref.borrow();
+    let len = this.get_property_value(String::from("length"));
+    if let Value::Number(len) = len {
+      len as u64
+    } else {
+      return Ok(Value::Boolean(false));
+    }
+  } else {
+    return Ok(Value::Boolean(false));
+  };
+
+  let this_value = call_ctx.this.clone();
+  let this_ref = get_array_object_from_this(&call_ctx.this).unwrap();
+
+  let this_arg = if args.len() > 1 {
+    Some(args[1].clone())
+  } else {
+    None
+  };
+
+  for index in 0..len {
+    let this_borrowed = this_ref.borrow();
+    let element = this_borrowed.get_property_value(index.to_string());
+    if matches!(element, Value::Undefined) {
+      drop(this_borrowed);
+      continue;
+    }
+
+    let callback_args: Vec<crate::value::ValueInfo> = vec![
+      element.to_value_info(),
+      Value::Number(index as f64).to_value_info(),
+      this_value.to_value_info()
+    ];
+    drop(this_borrowed);
+
+    call_ctx.ctx.call_function_with_bytecode(callback_func.clone(), None, None, callback_args)?;
+    let result = call_ctx.ctx.pop_stack_value();
+
+    if result.to_boolean(call_ctx.ctx) {
+      return Ok(Value::Boolean(true));
+    }
+  }
+
+  Ok(Value::Boolean(false))
+}
+
+// Array.prototype.reduce
+fn array_reduce(call_ctx: &mut CallContext, args: Vec<Value>) -> JSIResult<Value> {
+  let callback = if args.len() > 0 {
+    &args[0]
+  } else {
+    return Err(JSIError::new(JSIErrorType::TypeError, String::from("Reduce of empty array with no initial value"), 0, 0));
+  };
+
+  let callback_func = match callback {
+    Value::Function(func) => Rc::clone(func),
+    _ => return Err(JSIError::new(JSIErrorType::TypeError, format!("Array.prototype.reduce callback must be a function"), 0, 0))
+  };
+
+  let this_array_obj = get_array_object_from_this(&call_ctx.this);
+  let len = if let Some(this_ref) = this_array_obj {
+    let this = this_ref.borrow();
+    let len = this.get_property_value(String::from("length"));
+    if let Value::Number(len) = len {
+      len as u64
+    } else {
+      0
+    }
+  } else {
+    0
+  };
+
+  let this_value = call_ctx.this.clone();
+  let this_ref = get_array_object_from_this(&call_ctx.this).unwrap();
+
+  let mut accumulator: Value;
+  let mut start_index: u64 = 0;
+
+  if args.len() > 1 {
+    accumulator = args[1].clone();
+  } else {
+    // Find first element
+    let mut found = false;
+    let mut first_element: Option<Value> = None;
+    for index in 0..len {
+      let this_borrowed = this_ref.borrow();
+      let element = this_borrowed.get_property_value(index.to_string());
+      if !matches!(element, Value::Undefined) {
+        first_element = Some(element);
+        start_index = index + 1;
+        found = true;
+        drop(this_borrowed);
+        break;
+      }
+      drop(this_borrowed);
+    }
+    if !found {
+      return Err(JSIError::new(JSIErrorType::TypeError, String::from("Reduce of empty array with no initial value"), 0, 0));
+    }
+    accumulator = first_element.unwrap();
+  }
+
+  for index in start_index..len {
+    let this_borrowed = this_ref.borrow();
+    let element = this_borrowed.get_property_value(index.to_string());
+    if matches!(element, Value::Undefined) {
+      drop(this_borrowed);
+      continue;
+    }
+
+    let callback_args: Vec<crate::value::ValueInfo> = vec![
+      accumulator.to_value_info(),
+      element.to_value_info(),
+      Value::Number(index as f64).to_value_info(),
+      this_value.to_value_info()
+    ];
+    drop(this_borrowed);
+
+    call_ctx.ctx.call_function_with_bytecode(callback_func.clone(), None, None, callback_args)?;
+    accumulator = call_ctx.ctx.pop_stack_value();
+  }
+
+  Ok(accumulator)
 }
