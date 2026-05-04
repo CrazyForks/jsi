@@ -5,9 +5,10 @@ use crate::ast_node::{ClassType, CallContext};
 use crate::builtins::promise::bind_global_promise;
 use crate::builtins::regexp::bind_global_regexp;
 use crate::constants::{GLOBAL_OBJECT_NAME_LIST, GLOBAL_OBJECT_NAME, PROTO_PROPERTY_NAME, GLOBAL_ERROR_NAME, GLOBAL_TYPE_ERROR_NAME, GLOBAL_JSON_NAME, GLOBAL_DATE_NAME};
+use crate::scope::get_global_scope;
 use crate::value::Value;
 use crate::context::{Context};
-use crate::error::{JSIResult, JSIError, JSIErrorType};
+use crate::error::{JSIResult};
 use super::array::bind_global_array;
 use super::boolean::{bind_global_boolean};
 use super::error::{bind_global_error};
@@ -172,13 +173,19 @@ pub fn get_global_object_prototype_by_name(ctx: &mut Context, name: &str) -> Rc<
 
 // 绑定全局函数 parseInt 和 parseFloat
 fn bind_global_functions(ctx: &mut Context) {
-  // 先创建函数
+  // 先创建所有函数（必须在借用global之前创建，避免双重借用）
   let parse_int_fun = builtin_function(ctx, String::from("parseInt"), 2f64, global_parse_int);
   let parse_float_fun = builtin_function(ctx, String::from("parseFloat"), 1f64, global_parse_float);
   let is_nan_fun = builtin_function(ctx, String::from("isNaN"), 1f64, global_is_nan);
   let is_finite_fun = builtin_function(ctx, String::from("isFinite"), 1f64, global_is_finite);
 
-  // 借用 global 并插入函数
+  // URI 函数
+  let decode_uri_fun = builtin_function(ctx, String::from("decodeURI"), 1f64, global_decode_uri);
+  let decode_uri_component_fun = builtin_function(ctx, String::from("decodeURIComponent"), 1f64, global_decode_uri_component);
+  let encode_uri_fun = builtin_function(ctx, String::from("encodeURI"), 1f64, global_encode_uri);
+  let encode_uri_component_fun = builtin_function(ctx, String::from("encodeURIComponent"), 1f64, global_encode_uri_component);
+
+  // 借用 global 并插入函数到全局对象
   let global_this = Rc::clone(&ctx.global);
   let mut global_mut = global_this.borrow_mut();
 
@@ -199,6 +206,28 @@ fn bind_global_functions(ctx: &mut Context) {
 
   // Infinity 常量
   global_mut.property.insert(String::from("Infinity"), Property { enumerable: true, value: Value::Number(f64::INFINITY) });
+
+  global_mut.property.insert(String::from("decodeURI"), Property { enumerable: true, value: decode_uri_fun.clone() });
+  global_mut.property.insert(String::from("decodeURIComponent"), Property { enumerable: true, value: decode_uri_component_fun.clone() });
+  global_mut.property.insert(String::from("encodeURI"), Property { enumerable: true, value: encode_uri_fun.clone() });
+  global_mut.property.insert(String::from("encodeURIComponent"), Property { enumerable: true, value: encode_uri_component_fun.clone() });
+
+  // 释放 global 的借用
+  drop(global_mut);
+
+  // 同时把这些函数添加到全局作用域，以便变量查找能找到它们
+  let global_scope = get_global_scope(Rc::clone(&ctx.cur_scope));
+  let mut scope_mut = global_scope.borrow_mut();
+  scope_mut.set_value(String::from("parseInt"), parse_int_fun, false);
+  scope_mut.set_value(String::from("parseFloat"), parse_float_fun, false);
+  scope_mut.set_value(String::from("isNaN"), is_nan_fun, false);
+  scope_mut.set_value(String::from("isFinite"), is_finite_fun, false);
+  scope_mut.set_value(String::from("NaN"), Value::NAN, false);
+  scope_mut.set_value(String::from("Infinity"), Value::Number(f64::INFINITY), false);
+  scope_mut.set_value(String::from("decodeURI"), decode_uri_fun, false);
+  scope_mut.set_value(String::from("decodeURIComponent"), decode_uri_component_fun, false);
+  scope_mut.set_value(String::from("encodeURI"), encode_uri_fun, false);
+  scope_mut.set_value(String::from("encodeURIComponent"), encode_uri_component_fun, false);
 }
 
 // parseInt(string, radix)
@@ -414,4 +443,126 @@ fn global_is_finite(call_ctx: &mut CallContext, args: Vec<Value>) -> JSIResult<V
   };
 
   Ok(Value::Boolean(is_finite))
+}
+
+// decodeURI(encodedURI)
+// 解码 URI，保留 URI 特殊字符
+fn global_decode_uri(call_ctx: &mut CallContext, args: Vec<Value>) -> JSIResult<Value> {
+  let input_str = if args.len() > 0 {
+    args[0].to_string(call_ctx.ctx)
+  } else {
+    return Ok(Value::String(String::from("undefined")));
+  };
+
+  let result = decode_uri_helper(&input_str, false);
+  Ok(Value::String(result))
+}
+
+// decodeURIComponent(encodedURIComponent)
+// 解码 URI 组件，解码所有特殊字符
+fn global_decode_uri_component(call_ctx: &mut CallContext, args: Vec<Value>) -> JSIResult<Value> {
+  let input_str = if args.len() > 0 {
+    args[0].to_string(call_ctx.ctx)
+  } else {
+    return Ok(Value::String(String::from("undefined")));
+  };
+
+  let result = decode_uri_helper(&input_str, true);
+  Ok(Value::String(result))
+}
+
+// encodeURI(uri)
+// 编码 URI，保留 URI 特殊字符
+fn global_encode_uri(call_ctx: &mut CallContext, args: Vec<Value>) -> JSIResult<Value> {
+  let input_str = if args.len() > 0 {
+    args[0].to_string(call_ctx.ctx)
+  } else {
+    return Ok(Value::String(String::from("undefined")));
+  };
+
+  let result = encode_uri_helper(&input_str, false);
+  Ok(Value::String(result))
+}
+
+// encodeURIComponent(uriComponent)
+// 编码 URI 组件，编码所有特殊字符
+fn global_encode_uri_component(call_ctx: &mut CallContext, args: Vec<Value>) -> JSIResult<Value> {
+  let input_str = if args.len() > 0 {
+    args[0].to_string(call_ctx.ctx)
+  } else {
+    return Ok(Value::String(String::from("undefined")));
+  };
+
+  let result = encode_uri_helper(&input_str, true);
+  Ok(Value::String(result))
+}
+
+// 辅助函数：判断字符是否是 URI 保留字符
+fn is_uri_reserved(c: char) -> bool {
+  matches!(c, ';' | '/' | '?' | ':' | '@' | '&' | '=' | '+' | '$' | ',')
+}
+
+// 辅助函数：判断字符是否是 URI 非转义字符
+fn is_uri_unreserved(c: char) -> bool {
+  (c >= 'A' && c <= 'Z') ||
+  (c >= 'a' && c <= 'z') ||
+  (c >= '0' && c <= '9') ||
+  matches!(c, '-' | '_' | '.' | '!' | '~' | '*' | '\'' | '(' | ')')
+}
+
+// 辅助函数：解码 URI
+fn decode_uri_helper(input: &str, is_component: bool) -> String {
+  let mut result = String::new();
+  let mut chars = input.chars().peekable();
+
+  while let Some(c) = chars.next() {
+    if c == '%' {
+      let mut hex = String::new();
+      if let (Some(h1), Some(h2)) = (chars.next(), chars.next()) {
+        let hex_str = format!("{}{}", h1, h2);
+        if let Ok(byte) = u8::from_str_radix(&hex_str, 16) {
+          // 如果不是 component 模式下，保留字符不解码
+          if !is_component && is_uri_reserved(byte as char) {
+            result.push('%');
+            result.push(h1);
+            result.push(h2);
+          } else {
+            result.push(byte as char);
+          }
+        } else {
+          result.push('%');
+          result.push(h1);
+          result.push(h2);
+        }
+      } else {
+        result.push('%');
+      }
+    } else {
+      result.push(c);
+    }
+  }
+
+  result
+}
+
+// 辅助函数：编码 URI
+fn encode_uri_helper(input: &str, is_component: bool) -> String {
+  let mut result = String::new();
+
+  for c in input.chars() {
+    if is_uri_unreserved(c) {
+      result.push(c);
+    } else if !is_component && (is_uri_reserved(c) || c == '#') {
+      // encodeURI 不编码保留字符和 #
+      result.push(c);
+    } else {
+      // 需要编码的字符
+      let bytes = c.to_string().into_bytes();
+      for byte in bytes {
+        result.push_str(&format!("%{:02X}", byte));
+      }
+    }
+  }
+
+  result
 }

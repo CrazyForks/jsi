@@ -506,6 +506,40 @@ impl Context {
               return Err(JSIError::new(JSIErrorType::SyntaxError, String::from("prefix unary arg is required"), 0, 0));
             }
           },
+          EByteCodeop::OpWithEnter => {
+            // 从栈顶弹出对象
+            if let Some(object_value) = self.stack.pop() {
+              // 确保是对象类型
+              match object_value.value {
+                Value::Object(_) => {},
+                _ => {
+                  // 非对象类型，抛出 TypeError
+                  return Err(JSIError::new(JSIErrorType::TypeError, String::from("with statement requires an object"), 0, 0));
+                }
+              }
+              // 创建新的 with 作用域
+              let new_scope = Rc::new(RefCell::new(Scope::new()));
+              {
+                let mut new_scope_mut = new_scope.borrow_mut();
+                new_scope_mut.parent = Some(Rc::clone(&self.cur_scope));
+                new_scope_mut.from = Some(Rc::clone(&self.cur_scope));
+                new_scope_mut.with_object = Some(object_value.value.clone());
+              }
+              self.cur_scope = new_scope;
+            } else {
+              return Err(JSIError::new(JSIErrorType::TypeError, String::from("with statement requires an object"), 0, 0));
+            }
+          },
+          EByteCodeop::OpWithLeave => {
+            // 离开 with 作用域，恢复父作用域
+            let parent = {
+              let cur = self.cur_scope.borrow();
+              cur.from.clone()
+            };
+            if let Some(parent_scope) = parent {
+              self.cur_scope = parent_scope;
+            }
+          },
           _ => {
             return Err(JSIError::new(JSIErrorType::SyntaxError, format!("Unsupported bytecode operation: {:?}", bytecode_item.op), 0, 0));
           }
@@ -771,6 +805,26 @@ impl Context {
             (*interrupt) = Value::Interrupt(Token::Continue, Expression::Unknown);
           }
           Ok(true)
+        },
+        Statement::With(with_statement) => {
+          // 计算对象表达式的值
+          let obj_value = self.execute_expression(&with_statement.object)?;
+          // 创建新的作用域，用于 with 语句
+          let new_scope = Rc::new(RefCell::new(Scope::new()));
+          {
+            let mut new_scope_mut = new_scope.borrow_mut();
+            new_scope_mut.parent = Some(Rc::clone(&self.cur_scope));
+            new_scope_mut.from = Some(Rc::clone(&self.cur_scope));
+            new_scope_mut.with_object = Some(obj_value);
+          }
+          // 切换到新作用域
+          let old_scope = self.cur_scope.clone();
+          self.cur_scope = new_scope;
+          // 执行 body
+          let result = self.call_statement(&with_statement.body, result_value, last_statement_value, interrupt, call_options);
+          // 恢复旧作用域
+          self.cur_scope = old_scope;
+          result
         },
         _ => {
           Err(JSIError::new(JSIErrorType::Unknown, format!("unknown statement: {:?}", statement), 0, 0))

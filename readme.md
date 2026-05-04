@@ -2,8 +2,7 @@
 
 JSI is a JavaScript interpreter written in Rust that supports bytecode similar to quickjs.
 
-<img src="https://img.shields.io/badge/Test262-6820%20Passed-brightgreen.svg" alt="test262 passed" /> <img src="https://img.shields.io/badge/Test262-48659%20Total-blue.svg" alt="test262 total" /> <img src="https://img.shields.io/badge/ES%201-Passed-blue.svg" alt="es1 100%" /> <img src="https://img.shields.io/badge/ES%203-Passed-blue.svg" alt="es3 pass" /> <img src="https://img.shields.io/badge/ES%205-Passed-blue.svg" alt="es5 pass" />
-
+<img src="https://img.shields.io/badge/Test262-7263%20Passed-brightgreen.svg" alt="test262 passed" /> <img src="https://img.shields.io/badge/Test262-48659%20Total-blue.svg" alt="test262 total" />
 ---
 
 ### Usage
@@ -94,7 +93,7 @@ if let Value::Promise(promise_rc) = &result {
 + git submodule `git submodule update --init --recursive`
 + test262 `RUST_MIN_STACK=8388608 cargo test --package jsi --test test262_test -- test_all_262 --exact --nocapture`
 + no test262 `RUST_MIN_STACK=8388608 cargo test --package jsi -- --skip test_all_262 --exact --nocapture`
-
++ test 262 by version `RUST_MIN_STACK=8388608 cargo test --test test262_by_version`
 ### Refs
 
 + Ecma Standard: https://tc39.es/ecma262/multipage/#sec-intro

@@ -1,0 +1,80 @@
+[
+  {
+    "version": "ES1",
+    "total": 616,
+    "passed": 231,
+    "pass_rate": "37.50%"
+  },
+  {
+    "version": "ES3",
+    "total": 1115,
+    "passed": 194,
+    "pass_rate": "17.40%"
+  },
+  {
+    "version": "ES5",
+    "total": 8222,
+    "passed": 2309,
+    "pass_rate": "28.08%"
+  },
+  {
+    "version": "ES6",
+    "total": 17360,
+    "passed": 1367,
+    "pass_rate": "7.87%"
+  },
+  {
+    "version": "ES2016",
+    "total": 132,
+    "passed": 34,
+    "pass_rate": "25.76%"
+  },
+  {
+    "version": "ES2017",
+    "total": 876,
+    "passed": 114,
+    "pass_rate": "13.01%"
+  },
+  {
+    "version": "ES2018",
+    "total": 2281,
+    "passed": 317,
+    "pass_rate": "13.90%"
+  },
+  {
+    "version": "ES2019",
+    "total": 150,
+    "passed": 3,
+    "pass_rate": "2.00%"
+  },
+  {
+    "version": "ES2020",
+    "total": 2670,
+    "passed": 383,
+    "pass_rate": "14.34%"
+  },
+  {
+    "version": "ES2021",
+    "total": 290,
+    "passed": 9,
+    "pass_rate": "3.10%"
+  },
+  {
+    "version": "ES2022",
+    "total": 1200,
+    "passed": 168,
+    "pass_rate": "14.00%"
+  },
+  {
+    "version": "ES2023",
+    "total": 533,
+    "passed": 35,
+    "pass_rate": "6.57%"
+  },
+  {
+    "version": "Unknown",
+    "total": 13214,
+    "passed": 2059,
+    "pass_rate": "15.58%"
+  }
+]

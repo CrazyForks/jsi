@@ -1,0 +1,3167 @@
+[
+  [
+    "statements/with",
+    "with/S12.10_A3.6_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "statements/with",
+    "with/S12.10_A3.12_T5.js",
+    "Error: TypeError"
+  ],
+  [
+    "statements/with",
+    "with/S12.10_A3.8_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "statements/with",
+    "with/S12.10_A1.9_T3.js",
+    "Error: TypeError"
+  ],
+  [
+    "statements/with",
+    "with/S12.10_A1.5_T4.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/compound-assignment",
+    "compound-assignment/S11.13.2_A5.11_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/compound-assignment",
+    "compound-assignment/S11.13.2_A6.10_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/compound-assignment",
+    "compound-assignment/S11.13.2_A5.9_T3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/compound-assignment",
+    "compound-assignment/S11.13.2_A2.1_T3.5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/compound-assignment",
+    "compound-assignment/S11.13.2_A2.1_T2.4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/Date",
+    "Date/S15.9.3.1_A1_T6.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Date",
+    "Date/S15.9.3.2_A2_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/Date",
+    "Date/S15.9.3.1_A3_T3.1.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/Date",
+    "Date/S15.9.3.1_A1_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Date",
+    "Date/S15.9.3.1_A5_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/toString",
+    "toString/S15.4.4.2_A3_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/toString",
+    "toString/S15.4.4.2_A1_T4.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/toString",
+    "toString/S15.4.4.2_A1_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/toString",
+    "toString/S15.4.4.2_A1_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/toString",
+    "toString/S15.3.4.2_A8.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/decodeURI",
+    "decodeURI/S15.1.3.1_A1.11_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/decodeURI",
+    "decodeURI/S15.1.3.1_A1.7_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/decodeURI",
+    "decodeURI/S15.1.3.1_A1.9_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/decodeURI",
+    "decodeURI/S15.1.3.1_A5.1.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/decodeURI",
+    "decodeURI/S15.1.3.1_A1.15_T4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/decodeURIComponent",
+    "decodeURIComponent/S15.1.3.2_A1.9_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/decodeURIComponent",
+    "decodeURIComponent/S15.1.3.2_A1.14_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/decodeURIComponent",
+    "decodeURIComponent/S15.1.3.2_A1.10_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/decodeURIComponent",
+    "decodeURIComponent/S15.1.3.2_A1.14_T4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/decodeURIComponent",
+    "decodeURIComponent/S15.1.3.2_A1.12_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/Object",
+    "Object/S15.2.1.1_A2_T11.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Object",
+    "Object/S15.2.2.1_A1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/Object",
+    "Object/S15.2.1.1_A1_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/Object",
+    "Object/S15.2.1.1_A3_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/Object",
+    "Object/S15.2.2.1_A1_T5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Date/prototype",
+    "prototype/S15.9.5_A33_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Date/prototype",
+    "prototype/S15.9.5_A17_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Date/prototype",
+    "prototype/S15.9.5_A28_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Date/prototype",
+    "prototype/S15.9.5_A15_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Date/prototype",
+    "prototype/S15.9.5_A31_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/function",
+    "function/S13.2.1_A6_T3.js",
+    "Error: TypeError"
+  ],
+  [
+    "statements/function",
+    "function/S13.2.2_A3_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/function",
+    "function/S13.2.2_A1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "statements/function",
+    "function/S13.2.2_A5_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "statements/function",
+    "function/S13.2.2_A14.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/replace",
+    "replace/S15.5.4.11_A1_T7.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/replace",
+    "replace/S15.5.4.11_A1_T15.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/replace",
+    "replace/S15.5.4.11_A3_T3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/replace",
+    "replace/S15.5.4.11_A1_T11.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/replace",
+    "replace/S15.5.4.11_A2_T9.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "built-ins/String",
+    "String/S15.5.1.1_A1_T19.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/String",
+    "String/S15.5.2.1_A1_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/String",
+    "String/S15.5.2.1_A1_T12.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/String",
+    "String/S15.5.1.1_A1_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/String",
+    "String/S15.5.3_A2_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/match",
+    "match/S15.5.4.10_A1_T7.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/match",
+    "match/S15.5.4.10_A2_T16.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/match",
+    "match/S15.5.4.10_A1_T3.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/match",
+    "match/S15.5.4.10_A9.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/match",
+    "match/S15.5.4.10_A2_T12.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "statements/try",
+    "try/S12.14_A7_T3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "statements/try",
+    "try/S12.14_A13_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "statements/try",
+    "try/S12.14_A17.js",
+    "Error: TypeError"
+  ],
+  [
+    "statements/try",
+    "try/S12.14_A9_T4.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "statements/try",
+    "try/S12.14_A11_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "built-ins/Function",
+    "Function/S15.3_A3_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/Function",
+    "Function/S15.3.2.1_A1_T4.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Function",
+    "Function/S15.3.2.1_A3_T4.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Function",
+    "Function/S15.3_A3_T6.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/Function",
+    "Function/S15.3.2.1_A3_T5.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/slice",
+    "slice/S15.4.4.10_A3_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/slice",
+    "slice/S15.4.4.10_A4_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/slice",
+    "slice/S15.4.4.10_A1.3_T4.js",
+    "Panic"
+  ],
+  [
+    "prototype/slice",
+    "slice/S15.4.4.10_A1.5_T1.js",
+    "Panic"
+  ],
+  [
+    "prototype/slice",
+    "slice/S15.4.4.10_A2.2_T5.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/search",
+    "search/S15.5.4.12_A1_T13.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/search",
+    "search/S15.5.4.12_A9.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/search",
+    "search/S15.5.4.12_A11.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/search",
+    "search/S15.5.4.12_A2_T4.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/search",
+    "search/S15.5.4.12_A10.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/substring",
+    "substring/S15.5.4.15_A1_T5.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/substring",
+    "substring/S15.5.4.15_A3_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/substring",
+    "substring/S15.5.4.15_A1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/substring",
+    "substring/S15.5.4.15_A3_T5.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/substring",
+    "substring/S15.5.4.15_A3_T4.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/call",
+    "call/S15.3.4.4_A3_T4.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/call",
+    "call/S15.3.4.4_A5_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/call",
+    "call/S15.3.4.4_A7_T4.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/call",
+    "call/S15.3.4.4_A3_T5.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/call",
+    "call/S15.3.4.4_A3_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/apply",
+    "apply/S15.3.4.3_A8_T6.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/apply",
+    "apply/S15.3.4.3_A3_T5.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/apply",
+    "apply/S15.3.4.3_A3_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/apply",
+    "apply/S15.3.4.3_A5_T4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/apply",
+    "apply/S15.3.4.3_A7_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleUpperCase",
+    "toLocaleUpperCase/S15.5.4.19_A1_T12.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/toLocaleUpperCase",
+    "toLocaleUpperCase/S15.5.4.19_A2_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleUpperCase",
+    "toLocaleUpperCase/S15.5.4.19_A1_T13.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleUpperCase",
+    "toLocaleUpperCase/S15.5.4.19_A1_T4.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleUpperCase",
+    "toLocaleUpperCase/S15.5.4.19_A1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleLowerCase",
+    "toLocaleLowerCase/S15.5.4.17_A1_T8.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleLowerCase",
+    "toLocaleLowerCase/S15.5.4.17_A6.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleLowerCase",
+    "toLocaleLowerCase/S15.5.4.17_A1_T10.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleLowerCase",
+    "toLocaleLowerCase/S15.5.4.17_A1_T14.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleLowerCase",
+    "toLocaleLowerCase/S15.5.4.17_A1_T9.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/less-than-or-equal",
+    "less-than-or-equal/S11.8.3_A2.4_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/less-than-or-equal",
+    "less-than-or-equal/S11.8.3_A3.1_T2.2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/less-than-or-equal",
+    "less-than-or-equal/S11.8.3_A4.12_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/less-than-or-equal",
+    "less-than-or-equal/S11.8.3_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/less-than-or-equal",
+    "less-than-or-equal/S11.8.3_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/indexOf",
+    "indexOf/S15.5.4.7_A4_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/indexOf",
+    "indexOf/S15.5.4.7_A4_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/indexOf",
+    "indexOf/S15.5.4.7_A3_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/indexOf",
+    "indexOf/S15.5.4.7_A8.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/indexOf",
+    "indexOf/S15.5.4.7_A1_T6.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/charCodeAt",
+    "charCodeAt/S15.5.4.5_A6.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/charCodeAt",
+    "charCodeAt/S15.5.4.5_A1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/charCodeAt",
+    "charCodeAt/S15.5.4.5_A2.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/charCodeAt",
+    "charCodeAt/S15.5.4.5_A1_T5.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/charCodeAt",
+    "charCodeAt/S15.5.4.5_A3.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/greater-than-or-equal",
+    "greater-than-or-equal/S11.8.4_A2.1_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/greater-than-or-equal",
+    "greater-than-or-equal/S11.8.4_A4.11.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/greater-than-or-equal",
+    "greater-than-or-equal/S11.8.4_A4.9.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/greater-than-or-equal",
+    "greater-than-or-equal/S11.8.4_A4.8.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/greater-than-or-equal",
+    "greater-than-or-equal/S11.8.4_A3.1_T2.2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/instanceof",
+    "instanceof/S11.8.6_A6_T4.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/instanceof",
+    "instanceof/S15.3.5.3_A3_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/instanceof",
+    "instanceof/S11.8.6_A4_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/instanceof",
+    "instanceof/S11.8.6_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/instanceof",
+    "instanceof/S11.8.6_A2.4_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/less-than",
+    "less-than/S11.8.1_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/less-than",
+    "less-than/S11.8.1_A4.12_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/less-than",
+    "less-than/S11.8.1_A2.1_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/less-than",
+    "less-than/S11.8.1_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/less-than",
+    "less-than/S11.8.1_A2.4_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/addition",
+    "addition/S11.6.1_A2.2_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/addition",
+    "addition/S11.6.1_A2.4_T4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/addition",
+    "addition/S11.6.1_A4_T8.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/addition",
+    "addition/S11.6.1_A4_T9.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/addition",
+    "addition/S11.6.1_A4_T6.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/division",
+    "division/S11.5.2_A4_T6.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/division",
+    "division/S11.5.2_A4_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/division",
+    "division/S11.5.2_A2.2_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/division",
+    "division/S11.5.2_A2.4_T4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/division",
+    "division/S11.5.2_A4_T8.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/encodeURI",
+    "encodeURI/S15.1.3.3_A2.5_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/encodeURI",
+    "encodeURI/S15.1.3.3_A1.2_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/encodeURI",
+    "encodeURI/S15.1.3.3_A2.3_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/encodeURI",
+    "encodeURI/S15.1.3.3_A2.1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/encodeURI",
+    "encodeURI/S15.1.3.3_A2.4_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/encodeURIComponent",
+    "encodeURIComponent/S15.1.3.4_A4_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/encodeURIComponent",
+    "encodeURIComponent/S15.1.3.4_A2.2_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/encodeURIComponent",
+    "encodeURIComponent/S15.1.3.4_A1.3_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/encodeURIComponent",
+    "encodeURIComponent/S15.1.3.4_A1.1_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/encodeURIComponent",
+    "encodeURIComponent/S15.1.3.4_A5.2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/valueOf",
+    "valueOf/S15.7.4.4_A1_T02.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/valueOf",
+    "valueOf/S15.7.4.4_A1_T01.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/valueOf",
+    "valueOf/S15.7.4.4_A2_T03.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/valueOf",
+    "valueOf/S15.2.4.4_A14.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/valueOf",
+    "valueOf/S15.2.4.4_A10.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/greater-than",
+    "greater-than/S11.8.2_A3.1_T2.2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/greater-than",
+    "greater-than/S11.8.2_A2.3_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/greater-than",
+    "greater-than/S11.8.2_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/greater-than",
+    "greater-than/S11.8.2_A4.5.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/greater-than",
+    "greater-than/S11.8.2_A2.2_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/does-not-equals",
+    "does-not-equals/S11.9.2_A7.9.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/does-not-equals",
+    "does-not-equals/S11.9.2_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/does-not-equals",
+    "does-not-equals/S11.9.2_A7.8.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/does-not-equals",
+    "does-not-equals/S11.9.2_A6.2_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/does-not-equals",
+    "does-not-equals/S11.9.2_A2.4_T4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/equals",
+    "equals/S11.9.1_A2.1_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/equals",
+    "equals/S11.9.1_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/equals",
+    "equals/S11.9.1_A6.2_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/equals",
+    "equals/S11.9.1_A7.9.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/equals",
+    "equals/S11.9.1_A4.1_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/parseInt",
+    "parseInt/S15.1.2.2_A7.2_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/parseInt",
+    "parseInt/S15.1.2.2_A4.1_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/parseInt",
+    "parseInt/S15.1.2.2_A3.2_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/parseInt",
+    "parseInt/S15.1.2.2_A9.5.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/parseInt",
+    "parseInt/S15.1.2.2_A8.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/property-accessors",
+    "property-accessors/S11.2.1_A4_T4.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/property-accessors",
+    "property-accessors/S11.2.1_A4_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/property-accessors",
+    "property-accessors/S11.2.1_A4_T5.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/property-accessors",
+    "property-accessors/S11.2.1_A1.2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/property-accessors",
+    "property-accessors/S11.2.1_A3_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/parseFloat",
+    "parseFloat/S15.1.2.3_A4_T5.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/parseFloat",
+    "parseFloat/S15.1.2.3_A4_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "built-ins/parseFloat",
+    "parseFloat/S15.1.2.3_A6.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/parseFloat",
+    "parseFloat/S15.1.2.3_A4_T4.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/parseFloat",
+    "parseFloat/S15.1.2.3_A5_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/toUpperCase",
+    "toUpperCase/S15.5.4.18_A2_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/toUpperCase",
+    "toUpperCase/S15.5.4.18_A1_T12.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/toUpperCase",
+    "toUpperCase/S15.5.4.18_A1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toUpperCase",
+    "toUpperCase/S15.5.4.18_A1_T13.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toUpperCase",
+    "toUpperCase/S15.5.4.18_A10.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/unsigned-right-shift",
+    "unsigned-right-shift/S11.7.3_A2.3_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/unsigned-right-shift",
+    "unsigned-right-shift/S11.7.3_A4_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/unsigned-right-shift",
+    "unsigned-right-shift/S11.7.3_A2.2_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/unsigned-right-shift",
+    "unsigned-right-shift/S11.7.3_A4_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/unsigned-right-shift",
+    "unsigned-right-shift/S11.7.3_A2.4_T4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/multiplication",
+    "multiplication/S11.5.1_A2.4_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/multiplication",
+    "multiplication/S11.5.1_A3_T1.5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/multiplication",
+    "multiplication/S11.5.1_A4_T5.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/multiplication",
+    "multiplication/S11.5.1_A2.1_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/multiplication",
+    "multiplication/S11.5.1_A4_T4.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/concat",
+    "concat/S15.4.4.4_A3_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/concat",
+    "concat/S15.4.4.4_A2_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/concat",
+    "concat/S15.4.4.4_A2_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/concat",
+    "concat/S15.4.4.4_A3_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/concat",
+    "concat/S15.4.4.4_A3_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/toLowerCase",
+    "toLowerCase/S15.5.4.16_A1_T8.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLowerCase",
+    "toLowerCase/S15.5.4.16_A8.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLowerCase",
+    "toLowerCase/S15.5.4.16_A1_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLowerCase",
+    "toLowerCase/S15.5.4.16_A10.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/toLowerCase",
+    "toLowerCase/S15.5.4.16_A1_T10.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/subtraction",
+    "subtraction/S11.6.2_A2.4_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/subtraction",
+    "subtraction/S11.6.2_A3_T1.5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/subtraction",
+    "subtraction/S11.6.2_A4_T5.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/subtraction",
+    "subtraction/S11.6.2_A4_T4.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/subtraction",
+    "subtraction/S11.6.2_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/postfix-increment",
+    "postfix-increment/S11.3.1_A5_T3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/postfix-increment",
+    "postfix-increment/S11.3.1_A3_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/postfix-increment",
+    "postfix-increment/S11.3.1_A5_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/postfix-increment",
+    "postfix-increment/S11.3.1_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/postfix-increment",
+    "postfix-increment/S11.3.1_A4_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/strict-equals",
+    "strict-equals/S11.9.4_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/strict-equals",
+    "strict-equals/S11.9.4_A6.1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/strict-equals",
+    "strict-equals/S11.9.4_A4.3.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/strict-equals",
+    "strict-equals/S11.9.4_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/strict-equals",
+    "strict-equals/S11.9.4_A8_T3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "built-ins/Array",
+    "Array/S15.4.5.2_A1_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Array",
+    "Array/S15.4.3_A1.1_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Array",
+    "Array/S15.4.5.2_A3_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Array",
+    "Array/S15.4.5.1_A2.3_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Array",
+    "Array/S15.4.3_A1.1_T3.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/postfix-decrement",
+    "postfix-decrement/S11.3.2_A2.2_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/postfix-decrement",
+    "postfix-decrement/S11.3.2_A4_T4.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/postfix-decrement",
+    "postfix-decrement/S11.3.2_A4_T5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/postfix-decrement",
+    "postfix-decrement/S11.3.2_A4_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/postfix-decrement",
+    "postfix-decrement/S11.3.2_A2.1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/strict-does-not-equals",
+    "strict-does-not-equals/S11.9.5_A4.1_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/strict-does-not-equals",
+    "strict-does-not-equals/S11.9.5_A2.4_T4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/strict-does-not-equals",
+    "strict-does-not-equals/S11.9.5_A8_T3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/strict-does-not-equals",
+    "strict-does-not-equals/S11.9.5_A4.3.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/strict-does-not-equals",
+    "strict-does-not-equals/S11.9.5_A8_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/modulus",
+    "modulus/S11.5.3_A4_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/modulus",
+    "modulus/S11.5.3_A2.1_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/modulus",
+    "modulus/S11.5.3_A4_T6.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/modulus",
+    "modulus/S11.5.3_A4_T7.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/modulus",
+    "modulus/S11.5.3_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/Number",
+    "Number/S15.7.2.1_A2.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/Number",
+    "Number/S15.7.2.1_A3.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Number",
+    "Number/S15.7.3_A5.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Number",
+    "Number/S15.7.3_A1.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Number",
+    "Number/S15.7.1.1_A2.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/variable",
+    "variable/S12.2_A11.js",
+    "Error: TypeError"
+  ],
+  [
+    "statements/variable",
+    "variable/S12.2_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/variable",
+    "variable/S12.2_A6_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/variable",
+    "variable/S12.2_A1.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/variable",
+    "variable/S12.2_A10.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "statements/for",
+    "for/S12.6.3_A5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "statements/for",
+    "for/S12.6.3_A4_T2.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/for",
+    "for/S12.6.3_A13.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/for",
+    "for/S12.6.3_A10.1_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/for",
+    "for/S12.6.3_A10_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Array/length",
+    "length/S15.4.5.1_A1.2_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Array/length",
+    "length/S15.4.2.2_A2.2_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Array/length",
+    "length/S15.4.2.2_A1.1_T3.js",
+    "Error: TypeError"
+  ],
+  [
+    "Array/length",
+    "length/S15.4.5.1_A1.1_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Array/length",
+    "length/S15.4.5.1_A1.3_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/break",
+    "break/S12.8_A7.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/break",
+    "break/S12.8_A8_T1.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/break",
+    "break/S12.8_A6.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/break",
+    "break/S12.8_A5_T2.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/break",
+    "break/S12.8_A1_T3.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/continue",
+    "continue/S12.7_A8_T2.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/continue",
+    "continue/S12.7_A1_T1.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/continue",
+    "continue/S12.7_A5_T1.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/continue",
+    "continue/S12.7_A1_T4.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/continue",
+    "continue/S12.7_A5_T2.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/while",
+    "while/S12.6.2_A4_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/while",
+    "while/S12.6.2_A4_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/while",
+    "while/S12.6.2_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/while",
+    "while/S12.6.2_A1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "statements/while",
+    "while/S12.6.2_A15.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "prototype/join",
+    "join/S15.4.4.5_A3.2_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/join",
+    "join/S15.4.4.5_A5_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/join",
+    "join/S15.4.4.5_A2_T4.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/join",
+    "join/S15.4.4.5_A3.1_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/join",
+    "join/S15.4.4.5_A1.2_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/return",
+    "return/S12.9_A1_T9.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/return",
+    "return/S12.9_A1_T8.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/return",
+    "return/S12.9_A1_T3.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/return",
+    "return/S12.9_A1_T7.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/return",
+    "return/S12.9_A1_T6.js",
+    "Wrong error: expected SyntaxError, got Unknown"
+  ],
+  [
+    "statements/do-while",
+    "do-while/S12.6.1_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/do-while",
+    "do-while/S12.6.1_A1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "statements/do-while",
+    "do-while/S12.6.1_A4_T4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/do-while",
+    "do-while/S12.6.1_A4_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/do-while",
+    "do-while/S12.6.1_A4_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/right-shift",
+    "right-shift/S11.7.2_A5.1_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/right-shift",
+    "right-shift/S11.7.2_A2.4_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/right-shift",
+    "right-shift/S11.7.2_A3_T1.5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/right-shift",
+    "right-shift/S11.7.2_A5.2_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/right-shift",
+    "right-shift/S11.7.2_A2.1_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/prefix-increment",
+    "prefix-increment/S11.4.4_A4_T5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/prefix-increment",
+    "prefix-increment/S11.4.4_A3_T5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/prefix-increment",
+    "prefix-increment/S11.4.4_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/prefix-increment",
+    "prefix-increment/S11.4.4_A5_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/prefix-increment",
+    "prefix-increment/S11.4.4_A2.1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/left-shift",
+    "left-shift/S11.7.1_A2.2_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/left-shift",
+    "left-shift/S11.7.1_A2.4_T4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/left-shift",
+    "left-shift/S11.7.1_A2.3_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/left-shift",
+    "left-shift/S11.7.1_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/left-shift",
+    "left-shift/S11.7.1_A2.1_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Function/prototype",
+    "prototype/S15.3.5.2_A1_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Function/prototype",
+    "prototype/S15.3.4_A2_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "Function/prototype",
+    "prototype/S15.3.3.1_A4.js",
+    "Error: TypeError"
+  ],
+  [
+    "Function/prototype",
+    "prototype/S15.3.4_A2_T3.js",
+    "Error: TypeError"
+  ],
+  [
+    "Function/prototype",
+    "prototype/S15.3.3.1_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/charAt",
+    "charAt/S15.5.4.4_A8.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/charAt",
+    "charAt/S15.5.4.4_A1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/charAt",
+    "charAt/S15.5.4.4_A2.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/charAt",
+    "charAt/S15.5.4.4_A10.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/charAt",
+    "charAt/S15.5.4.4_A1_T10.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/prefix-decrement",
+    "prefix-decrement/S11.4.5_A2.1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/prefix-decrement",
+    "prefix-decrement/S11.4.5_A4_T5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/prefix-decrement",
+    "prefix-decrement/S11.4.5_A3_T5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/prefix-decrement",
+    "prefix-decrement/S11.4.5_A2.2_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/prefix-decrement",
+    "prefix-decrement/S11.4.5_A5_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Number/prototype",
+    "prototype/S15.7.3.1_A3.js",
+    "Error: Unknown"
+  ],
+  [
+    "Number/prototype",
+    "prototype/S15.7.3.1_A2_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Number/prototype",
+    "prototype/S15.7.4_A3.6.js",
+    "Error: Unknown"
+  ],
+  [
+    "Number/prototype",
+    "prototype/S15.7.4_A1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Number/prototype",
+    "prototype/S15.7.4_A3.3.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/for-in",
+    "for-in/S12.6.4_A7_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/for-in",
+    "for-in/S12.6.4_A4.1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/for-in",
+    "for-in/S12.6.4_A3.1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/for-in",
+    "for-in/S12.6.4_A4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/for-in",
+    "for-in/S12.6.4_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/if",
+    "if/S12.5_A12_T3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "statements/if",
+    "if/S12.5_A1.2_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/if",
+    "if/S12.5_A12_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "statements/if",
+    "if/S12.5_A1.1_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/if",
+    "if/S12.5_A1.1_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/lastIndexOf",
+    "lastIndexOf/S15.5.4.8_A4_T5.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/lastIndexOf",
+    "lastIndexOf/S15.5.4.8_A4_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/lastIndexOf",
+    "lastIndexOf/S15.5.4.8_A4_T4.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/lastIndexOf",
+    "lastIndexOf/S15.5.4.8_A10.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/lastIndexOf",
+    "lastIndexOf/S15.5.4.8_A1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/logical-or",
+    "logical-or/S11.11.2_A4_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/logical-or",
+    "logical-or/S11.11.2_A2.1_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/logical-or",
+    "logical-or/S11.11.2_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/logical-or",
+    "logical-or/S11.11.2_A3_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/logical-or",
+    "logical-or/S11.11.2_A2.1_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/assignment",
+    "assignment/S11.13.1_A6_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/assignment",
+    "assignment/S11.13.1_A4_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/assignment",
+    "assignment/S11.13.1_A5_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/assignment",
+    "assignment/S11.13.1_A2.1_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/assignment",
+    "assignment/S11.13.1_A5_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/propertyIsEnumerable",
+    "propertyIsEnumerable/S15.2.4.7_A2_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/propertyIsEnumerable",
+    "propertyIsEnumerable/S15.2.4.7_A9.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/propertyIsEnumerable",
+    "propertyIsEnumerable/S15.2.4.7_A8.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/propertyIsEnumerable",
+    "propertyIsEnumerable/S15.2.4.7_A6.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/propertyIsEnumerable",
+    "propertyIsEnumerable/S15.2.4.7_A11.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/pop",
+    "pop/S15.4.4.6_A4_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/pop",
+    "pop/S15.4.4.6_A2_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/pop",
+    "pop/S15.4.4.6_A3_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/pop",
+    "pop/S15.4.4.6_A3_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/pop",
+    "pop/S15.4.4.6_A1.2_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/sort",
+    "sort/S15.4.4.11_A2.2_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/sort",
+    "sort/S15.4.4.11_A5_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/sort",
+    "sort/S15.4.4.11_A2.2_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/sort",
+    "sort/S15.4.4.11_A3_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/sort",
+    "sort/S15.4.4.11_A2.1_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/in",
+    "in/S11.8.7_A2.1_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/in",
+    "in/S11.8.7_A4.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/in",
+    "in/S11.8.7_A2.4_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/in",
+    "in/S11.8.7_A2.4_T4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/in",
+    "in/S11.8.7_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/delete",
+    "delete/S11.4.1_A2.2_T3.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/delete",
+    "delete/S11.4.1_A3.1.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/delete",
+    "delete/S11.4.1_A3.3_T6.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/delete",
+    "delete/S11.4.1_A3.3_T5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/delete",
+    "delete/S11.4.1_A3.3_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/splice",
+    "splice/S15.4.4.12_A4_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/splice",
+    "splice/S15.4.4.12_A4_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/splice",
+    "splice/S15.4.4.12_A2.2_T5.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/splice",
+    "splice/S15.4.4.12_A6.1_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/splice",
+    "splice/S15.4.4.12_A6.1_T3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/toLocaleString",
+    "toLocaleString/S15.4.4.3_A1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleString",
+    "toLocaleString/S15.4.4.3_A3_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleString",
+    "toLocaleString/S15.2.4.3_A8.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleString",
+    "toLocaleString/S15.2.4.3_A9.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toLocaleString",
+    "toLocaleString/S15.2.4.3_A6.js",
+    "Error: TypeError"
+  ],
+  [
+    "Function/length",
+    "length/S15.3.5.1_A4_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Function/length",
+    "length/S15.3.5.1_A3_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Function/length",
+    "length/S15.3.5.1_A1_T3.js",
+    "Error: TypeError"
+  ],
+  [
+    "Function/length",
+    "length/S15.3.5.1_A3_T3.js",
+    "Error: TypeError"
+  ],
+  [
+    "Function/length",
+    "length/S15.3.5.1_A3_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Error/prototype",
+    "prototype/S15.11.3.1_A4_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Error/prototype",
+    "prototype/S15.11.3.1_A2_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Error/prototype",
+    "prototype/S15.11.4_A1.js",
+    "Error: TypeError"
+  ],
+  [
+    "Error/prototype",
+    "prototype/S15.11.3.1_A3_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Error/prototype",
+    "prototype/S15.11.3.1_A1_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/atan2",
+    "atan2/S15.8.2.5_A16.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Math/atan2",
+    "atan2/S15.8.2.5_A1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Math/atan2",
+    "atan2/S15.8.2.5_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/atan2",
+    "atan2/S15.8.2.5_A4.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Math/atan2",
+    "atan2/S15.8.2.5_A14.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Math/ceil",
+    "ceil/S15.8.2.6_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/ceil",
+    "ceil/S15.8.2.6_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/ceil",
+    "ceil/S15.8.2.6_A4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/ceil",
+    "ceil/S15.8.2.6_A7.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/ceil",
+    "ceil/S15.8.2.6_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/round",
+    "round/S15.8.2.15_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/round",
+    "round/S15.8.2.15_A7.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Math/round",
+    "round/S15.8.2.15_A6.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Math/round",
+    "round/S15.8.2.15_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/round",
+    "round/S15.8.2.15_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/localeCompare",
+    "localeCompare/S15.5.4.9_A1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/localeCompare",
+    "localeCompare/S15.5.4.9_A9.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/localeCompare",
+    "localeCompare/S15.5.4.9_A1_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/localeCompare",
+    "localeCompare/S15.5.4.9_A8.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/localeCompare",
+    "localeCompare/S15.5.4.9_A11.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/bitwise-or",
+    "bitwise-or/S11.10.3_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/bitwise-or",
+    "bitwise-or/S11.10.3_A2.1_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/bitwise-or",
+    "bitwise-or/S11.10.3_A3_T1.5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/bitwise-or",
+    "bitwise-or/S11.10.3_A2.4_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/bitwise-or",
+    "bitwise-or/S11.10.3_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "String/prototype",
+    "prototype/S15.5.4_A1.js",
+    "Error: Unknown"
+  ],
+  [
+    "String/prototype",
+    "prototype/S15.5.3.1_A1.js",
+    "Error: Unknown"
+  ],
+  [
+    "String/prototype",
+    "prototype/S15.5.3.1_A4.js",
+    "Error: Unknown"
+  ],
+  [
+    "String/prototype",
+    "prototype/S15.5.3.1_A3.js",
+    "Error: Unknown"
+  ],
+  [
+    "String/prototype",
+    "prototype/S15.5.4_A3.js",
+    "Error: TypeError"
+  ],
+  [
+    "Math/floor",
+    "floor/S15.8.2.9_A6.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Math/floor",
+    "floor/S15.8.2.9_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/floor",
+    "floor/S15.8.2.9_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/floor",
+    "floor/S15.8.2.9_A7.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/floor",
+    "floor/S15.8.2.9_A4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/bitwise-and",
+    "bitwise-and/S11.10.1_A3_T1.5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/bitwise-and",
+    "bitwise-and/S11.10.1_A2.4_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/bitwise-and",
+    "bitwise-and/S11.10.1_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/bitwise-and",
+    "bitwise-and/S11.10.1_A2.1_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/bitwise-and",
+    "bitwise-and/S11.10.1_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/logical-not",
+    "logical-not/S11.4.9_A3_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/logical-not",
+    "logical-not/S11.4.9_A3_T5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/logical-not",
+    "logical-not/S11.4.9_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/logical-not",
+    "logical-not/S11.4.9_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/logical-not",
+    "logical-not/S11.4.9_A3_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/bitwise-xor",
+    "bitwise-xor/S11.10.2_A2.2_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/bitwise-xor",
+    "bitwise-xor/S11.10.2_A2.3_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/bitwise-xor",
+    "bitwise-xor/S11.10.2_A2.1_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/bitwise-xor",
+    "bitwise-xor/S11.10.2_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/bitwise-xor",
+    "bitwise-xor/S11.10.2_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/logical-and",
+    "logical-and/S11.11.1_A3_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/logical-and",
+    "logical-and/S11.11.1_A2.4_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/logical-and",
+    "logical-and/S11.11.1_A2.1_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/logical-and",
+    "logical-and/S11.11.1_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/logical-and",
+    "logical-and/S11.11.1_A4_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/toFixed",
+    "toFixed/S15.7.4.5_A1.3_T02.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toFixed",
+    "toFixed/S15.7.4.5_A1.1_T02.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/toFixed",
+    "toFixed/S15.7.4.5_A1.4_T01.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toFixed",
+    "toFixed/S15.7.4.5_A2_T01.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/toFixed",
+    "toFixed/S15.7.4.5_A1.1_T01.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/conditional",
+    "conditional/S11.12_A2.1_T4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/conditional",
+    "conditional/S11.12_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/conditional",
+    "conditional/S11.12_A4_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/conditional",
+    "conditional/S11.12_A4_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/conditional",
+    "conditional/S11.12_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/unary-plus",
+    "unary-plus/S11.4.6_A3_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/unary-plus",
+    "unary-plus/S11.4.6_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/unary-plus",
+    "unary-plus/S11.4.6_A3_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/unary-plus",
+    "unary-plus/S11.4.6_A2.2_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/unary-plus",
+    "unary-plus/S11.4.6_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/Boolean",
+    "Boolean/S15.6.1.1_A1_T4.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Boolean",
+    "Boolean/S15.6.2.1_A2.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/Boolean",
+    "Boolean/S15.6.3_A1.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/Boolean",
+    "Boolean/S15.6.3_A2.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/Boolean",
+    "Boolean/S15.6.3_A3.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/call",
+    "call/S11.2.3_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/call",
+    "call/S11.2.4_A1.4_T3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/call",
+    "call/S11.2.4_A1.4_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/call",
+    "call/S11.2.3_A4_T5.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/call",
+    "call/S11.2.4_A1.4_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/bitwise-not",
+    "bitwise-not/S11.4.8_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/bitwise-not",
+    "bitwise-not/S11.4.8_A3_T5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/bitwise-not",
+    "bitwise-not/S11.4.8_A2.2_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/bitwise-not",
+    "bitwise-not/S11.4.8_A3_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/bitwise-not",
+    "bitwise-not/S11.4.8_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/asin",
+    "asin/S15.8.2.3_A4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/asin",
+    "asin/S15.8.2.3_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/asin",
+    "asin/S15.8.2.3_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/asin",
+    "asin/S15.8.2.3_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/asin",
+    "asin/S15.8.2.3_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/unshift",
+    "unshift/S15.4.4.13_A2_T3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/unshift",
+    "unshift/S15.4.4.13_A4_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/unshift",
+    "unshift/S15.4.4.13_A2_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/unshift",
+    "unshift/S15.4.4.13_A1_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/unshift",
+    "unshift/S15.4.4.13_A4_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Math/sqrt",
+    "sqrt/S15.8.2.17_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/sqrt",
+    "sqrt/S15.8.2.17_A2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Math/sqrt",
+    "sqrt/S15.8.2.17_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/sqrt",
+    "sqrt/S15.8.2.17_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/sqrt",
+    "sqrt/S15.8.2.17_A4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/log",
+    "log/S15.8.2.10_A2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Math/log",
+    "log/S15.8.2.10_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/log",
+    "log/S15.8.2.10_A4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/log",
+    "log/S15.8.2.10_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/log",
+    "log/S15.8.2.10_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/reverse",
+    "reverse/S15.4.4.8_A4_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/reverse",
+    "reverse/S15.4.4.8_A1_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/reverse",
+    "reverse/S15.4.4.8_A2_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/reverse",
+    "reverse/S15.4.4.8_A4_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/reverse",
+    "reverse/S15.4.4.8_A2_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "Math/cos",
+    "cos/S15.8.2.7_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/cos",
+    "cos/S15.8.2.7_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/cos",
+    "cos/S15.8.2.7_A4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/cos",
+    "cos/S15.8.2.7_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/cos",
+    "cos/S15.8.2.7_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/push",
+    "push/S15.4.4.7_A2_T3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/push",
+    "push/S15.4.4.7_A2_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/push",
+    "push/S15.4.4.7_A1_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/push",
+    "push/S15.4.4.7_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/push",
+    "push/S15.4.4.7_A5_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Math/exp",
+    "exp/S15.8.2.8_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/exp",
+    "exp/S15.8.2.8_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/exp",
+    "exp/S15.8.2.8_A4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/exp",
+    "exp/S15.8.2.8_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/exp",
+    "exp/S15.8.2.8_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/shift",
+    "shift/S15.4.4.9_A2_T5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/shift",
+    "shift/S15.4.4.9_A1.2_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/shift",
+    "shift/S15.4.4.9_A4_T1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/shift",
+    "shift/S15.4.4.9_A4_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/shift",
+    "shift/S15.4.4.9_A2_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Boolean/prototype",
+    "prototype/S15.6.3.1_A3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Boolean/prototype",
+    "prototype/S15.6.3.1_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Boolean/prototype",
+    "prototype/S15.6.3.1_A1.js",
+    "Error: Unknown"
+  ],
+  [
+    "Boolean/prototype",
+    "prototype/S15.6.3.1_A4.js",
+    "Error: TypeError"
+  ],
+  [
+    "Boolean/prototype",
+    "prototype/S15.6.4_A2.js",
+    "Error: TypeError"
+  ],
+  [
+    "Math/tan",
+    "tan/S15.8.2.18_A4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/tan",
+    "tan/S15.8.2.18_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/tan",
+    "tan/S15.8.2.18_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/tan",
+    "tan/S15.8.2.18_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/tan",
+    "tan/S15.8.2.18_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/unary-minus",
+    "unary-minus/S11.4.7_A2.2_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/unary-minus",
+    "unary-minus/S11.4.7_A4.2.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/unary-minus",
+    "unary-minus/S11.4.7_A2.1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/unary-minus",
+    "unary-minus/S11.4.7_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/unary-minus",
+    "unary-minus/S11.4.7_A3_T5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/this",
+    "this/S11.1.1_A4.2.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/this",
+    "this/S11.1.1_A3.2.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/this",
+    "this/S11.1.1_A3.1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/this",
+    "this/S11.1.1_A4.1.js",
+    "Error: TypeError"
+  ],
+  [
+    "expressions/new",
+    "new/S11.2.2_A1.2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/new",
+    "new/S11.2.2_A4_T5.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/new",
+    "new/S11.2.2_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/new",
+    "new/S11.2.2_A1.1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/void",
+    "void/S11.4.2_A4_T5.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/void",
+    "void/S11.4.2_A2_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/void",
+    "void/S11.4.2_A4_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/void",
+    "void/S11.4.2_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/comma",
+    "comma/S11.14_A2.1_T2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/comma",
+    "comma/S11.14_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/comma",
+    "comma/S11.14_A2.1_T3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/comma",
+    "comma/S11.14_A3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "prototype/bind",
+    "bind/S15.3.4.5_A2.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/bind",
+    "bind/S15.3.4.5_A5.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/bind",
+    "bind/S15.3.4.5_A1.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/bind",
+    "bind/S15.3.4.5_A16.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Math/acos",
+    "acos/S15.8.2.2_A4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/acos",
+    "acos/S15.8.2.2_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/acos",
+    "acos/S15.8.2.2_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/acos",
+    "acos/S15.8.2.2_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "String/fromCharCode",
+    "fromCharCode/S15.5.3.2_A3_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "String/fromCharCode",
+    "fromCharCode/S15.5.3.2_A1.js",
+    "Error: Unknown"
+  ],
+  [
+    "String/fromCharCode",
+    "fromCharCode/S15.5.3.2_A3_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "String/fromCharCode",
+    "fromCharCode/S15.5.3.2_A2.js",
+    "Error: TypeError"
+  ],
+  [
+    "Math/max",
+    "max/S15.8.2.11_A2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Math/max",
+    "max/S15.8.2.11_A4.js",
+    "Error: Unknown"
+  ],
+  [
+    "Math/max",
+    "max/S15.8.2.11_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/atan",
+    "atan/S15.8.2.4_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/atan",
+    "atan/S15.8.2.4_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/atan",
+    "atan/S15.8.2.4_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/grouping",
+    "grouping/S11.1.6_A3_T6.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/grouping",
+    "grouping/S11.1.6_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "expressions/grouping",
+    "grouping/S11.1.6_A2_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/constructor",
+    "constructor/S15.2.4.1_A1_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/constructor",
+    "constructor/S15.5.4.1_A1_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "prototype/constructor",
+    "constructor/S15.11.4.1_A1_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "Math/min",
+    "min/S15.8.2.12_A2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Math/min",
+    "min/S15.8.2.12_A4.js",
+    "Error: Unknown"
+  ],
+  [
+    "Math/min",
+    "min/S15.8.2.12_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Object/prototype",
+    "prototype/S15.2.3.1_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Object/prototype",
+    "prototype/S15.2.3.1_A2.js",
+    "Error: TypeError"
+  ],
+  [
+    "Object/prototype",
+    "prototype/S15.2.3.1_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "prototype/hasOwnProperty",
+    "hasOwnProperty/S15.2.4.5_A12.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/hasOwnProperty",
+    "hasOwnProperty/S15.2.4.5_A13.js",
+    "Error: Unknown"
+  ],
+  [
+    "prototype/hasOwnProperty",
+    "hasOwnProperty/S15.2.4.5_A1_T3.js",
+    "Error: Unknown"
+  ],
+  [
+    "expressions/object",
+    "object/S11.1.5_A4.1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/object",
+    "object/S11.1.5_A4.3.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "expressions/object",
+    "object/S11.1.5_A4.2.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Number/MIN_VALUE",
+    "MIN_VALUE/S15.7.3.3_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Number/MIN_VALUE",
+    "MIN_VALUE/S15.7.3.3_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Number/MIN_VALUE",
+    "MIN_VALUE/S15.7.3.3_A4.js",
+    "Error: TypeError"
+  ],
+  [
+    "Number/MAX_VALUE",
+    "MAX_VALUE/S15.7.3.2_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Number/MAX_VALUE",
+    "MAX_VALUE/S15.7.3.2_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Number/MAX_VALUE",
+    "MAX_VALUE/S15.7.3.2_A4.js",
+    "Error: TypeError"
+  ],
+  [
+    "Math/sin",
+    "sin/S15.8.2.16_A5.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/sin",
+    "sin/S15.8.2.16_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/sin",
+    "sin/S15.8.2.16_A4.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/abs",
+    "abs/S15.8.2.1_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/abs",
+    "abs/S15.8.2.1_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Math/abs",
+    "abs/S15.8.2.1_A3.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/Infinity",
+    "Infinity/S15.1.1.2_A2_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "built-ins/Infinity",
+    "Infinity/S15.1.1.2_A1.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/undefined",
+    "undefined/S15.1.1.3_A3_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "built-ins/undefined",
+    "undefined/S15.1.1.3_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/expression",
+    "expression/S12.4_A2_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/expression",
+    "expression/S12.4_A2_T1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "language/identifier-resolution",
+    "identifier-resolution/S11.1.2_A1_T1.js",
+    "Error: TypeError"
+  ],
+  [
+    "language/identifier-resolution",
+    "identifier-resolution/S11.1.2_A1_T2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/block",
+    "block/S12.1_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "statements/switch",
+    "switch/S12.11_A1_T2.js",
+    "Error: Unknown"
+  ],
+  [
+    "statements/throw",
+    "throw/S12.13_A3_T4.js",
+    "Error: Unknown"
+  ],
+  [
+    "Number/NEGATIVE_INFINITY",
+    "NEGATIVE_INFINITY/S15.7.3.5_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "Object/defineProperty",
+    "defineProperty/S15.2.3.6_A2.js",
+    "Error: TypeError"
+  ],
+  [
+    "Math/random",
+    "random/S15.8.2.14_A1.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/isNaN",
+    "isNaN/S15.1.2.4_A2.7.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "Number/POSITIVE_INFINITY",
+    "POSITIVE_INFINITY/S15.7.3.6_A2.js",
+    "Error: ReferenceError"
+  ],
+  [
+    "built-ins/NaN",
+    "NaN/S15.1.1.1_A2_T2.js",
+    "Error: TypeError"
+  ],
+  [
+    "Object/getOwnPropertyNames",
+    "getOwnPropertyNames/S15.2.3.4_A1_T1.js",
+    "Error: SyntaxError"
+  ],
+  [
+    "built-ins/isFinite",
+    "isFinite/S15.1.2.5_A2.7.js",
+    "Error: SyntaxError"
+  ]
+]

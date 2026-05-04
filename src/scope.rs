@@ -13,6 +13,8 @@ pub struct Scope {
   pub this: Option<Value>,
   variables: HashMap<String, VariableInfo>,
   pub function_call_args: Vec<ValueInfo>,
+  // with 语句使用的对象，优先从该对象中查找变量
+  pub with_object: Option<Value>,
 }
 
 
@@ -34,6 +36,7 @@ impl Scope {
       labels: vec![],
       variables: HashMap::new(),
       function_call_args: vec![],
+      with_object: None,
     }
   }
 
@@ -49,6 +52,28 @@ impl Scope {
 pub fn get_value_info_and_scope(scope: Rc<RefCell<Scope>>, identifier: String) -> (Option<ValueInfo>, Rc<RefCell<Scope>>, bool) {
   // println!("get_value_and_scope: {:?} {:?}", identifier, scope);
   let s = scope.borrow();
+
+  // with 语句：优先从 with_object 中查找属性
+  if let Some(with_obj) = &s.with_object {
+    match with_obj {
+      Value::Object(obj) => {
+        let obj_borrow = obj.borrow();
+        let prop_value = obj_borrow.get_property_value(identifier.clone());
+        if !matches!(prop_value, Value::Undefined) {
+          let value_info = ValueInfo {
+            name: Some(identifier.clone()),
+            value: prop_value,
+            is_const: false,
+            reference: Some(with_obj.clone()),
+            access_path: identifier.clone(),
+          };
+          return (Some(value_info), Rc::clone(&scope), false);
+        }
+      },
+      _ => {}
+    }
+  }
+
   let value = s.variables.get(&identifier);
   if let Some(val) = value {
     let value_info = ValueInfo {
@@ -60,10 +85,13 @@ pub fn get_value_info_and_scope(scope: Rc<RefCell<Scope>>, identifier: String) -
     };
     return (Some(value_info), Rc::clone(&scope), val.is_const)
   } else {
-    if let Some(parent) = &scope.borrow().parent {
-      get_value_info_and_scope(Rc::clone(parent), identifier)
+    // 先把 parent 克隆出来，然后 drop 借用，避免递归时的双重借用
+    let parent = s.parent.clone();
+    drop(s);
+    if let Some(p) = parent {
+      get_value_info_and_scope(p, identifier)
     } else {
-      (None, Rc::clone(&scope), false)
+      (None, scope, false)
     }
   }
 }

@@ -26,6 +26,7 @@ pub enum Statement {
   Unknown, // 未知
   Var(VariableDeclarationStatement),
   While(ForStatement),
+  With(WithStatement),
 }
 
 impl PartialEq for Statement {
@@ -37,6 +38,7 @@ impl PartialEq for Statement {
       (Statement::Block(a), Statement::Block(b)) => *a == *b,
       (Statement::Return(a), Statement::Return(b)) => *a == *b,
       (Statement::Expression(a), Statement::Expression(b)) => *a == *b,
+      (Statement::With(a), Statement::With(b)) => *a == *b,
       _ => false,
     }
   }
@@ -62,6 +64,7 @@ impl fmt::Debug for Statement {
       Statement::Try(_) => { "try"},
       Statement::Var(_) => { "var"},
       Statement::While(_) => { "while"},
+      Statement::With(_) => { "with"},
       _ => {
         "other"
       },
@@ -231,7 +234,11 @@ pub struct CatchClause {
   pub body: BlockStatement
 }
 
-
+#[derive(Debug, Clone, PartialEq)]
+pub struct WithStatement {
+  pub object: Box<Expression>,
+  pub body: Box<Statement>
+}
 
 #[derive(Debug, Clone, PartialEq)]
 pub struct FunctionDeclaration {

@@ -79,6 +79,10 @@ pub enum EByteCodeop {
     OpIn,
     // 空值合并 ??
     OpNullishCoalescing,
+    // with 语句：进入 with 作用域
+    OpWithEnter,
+    // with 语句：离开 with 作用域
+    OpWithLeave,
 }
 
 impl fmt::Display for EByteCodeop {
@@ -101,6 +105,8 @@ impl fmt::Display for EByteCodeop {
             EByteCodeop::OpMul => write!(f, "Mul"),
             EByteCodeop::OpDiv => write!(f, "Div"),
             EByteCodeop::OpCall => write!(f, "Call"),
+            EByteCodeop::OpWithEnter => write!(f, "WithEnter"),
+            EByteCodeop::OpWithLeave => write!(f, "WithLeave"),
             _ => write!(f, "Unknown"),
         }
     }

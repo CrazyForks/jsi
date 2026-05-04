@@ -4,7 +4,7 @@ use std::collections::HashMap;
 use std::{io};
 
 use crate::ast_token::{get_token_keyword, Token, get_token_literal};
-use crate::ast_node::{ Expression, NumberLiteral, StringLiteral, Statement, IdentifierLiteral, ExpressionStatement, PropertyAccessExpression, BinaryExpression, ConditionalExpression, CallExpression, Keywords, Parameter, BlockStatement, ReturnStatement, Declaration, PropertyAssignment, ObjectLiteral, ElementAccessExpression, FunctionDeclaration, PostfixUnaryExpression, PrefixUnaryExpression, AssignExpression, GroupExpression, VariableDeclaration, VariableDeclarationStatement, VariableFlag, ClassDeclaration, ClassMethodDeclaration, ArrayLiteral, ComputedPropertyName, IfStatement, ForStatement, ForInStatement, ForOfStatement, BreakStatement, ContinueStatement, LabeledStatement, SwitchStatement, CaseClause, NewExpression, TryCatchStatement, CatchClause, ThrowStatement, TemplateLiteralExpression, SequenceExpression};
+use crate::ast_node::{ Expression, NumberLiteral, StringLiteral, Statement, IdentifierLiteral, ExpressionStatement, PropertyAccessExpression, BinaryExpression, ConditionalExpression, CallExpression, Keywords, Parameter, BlockStatement, ReturnStatement, Declaration, PropertyAssignment, ObjectLiteral, ElementAccessExpression, FunctionDeclaration, PostfixUnaryExpression, PrefixUnaryExpression, AssignExpression, GroupExpression, VariableDeclaration, VariableDeclarationStatement, VariableFlag, ClassDeclaration, ClassMethodDeclaration, ArrayLiteral, ComputedPropertyName, IfStatement, ForStatement, ForInStatement, ForOfStatement, BreakStatement, ContinueStatement, LabeledStatement, SwitchStatement, CaseClause, NewExpression, TryCatchStatement, CatchClause, ThrowStatement, TemplateLiteralExpression, SequenceExpression, WithStatement};
 use crate::ast_utils::{get_hex_number_value, chars_to_string, process_string_escapes};
 use crate::bytecode::{ByteCode, EByteCodeop};
 use crate::error::{JSIResult, JSIError, JSIErrorType};
@@ -163,6 +163,9 @@ impl AST{
         },
         Token::Throw => {
           self.parse_throw_statement()
+        },
+        Token::With => {
+          self.parse_with_statement()
         },
         Token::LeftBrace => {
           // block
@@ -954,6 +957,36 @@ impl AST{
 
     // TODO: finally
     Ok(Statement::Try(try_statment))
+  }
+
+  fn parse_with_statement(&mut self) -> JSIResult<Statement> {
+    self.check_token_and_next(Token::With)?;
+    self.check_token_and_next(Token::LeftParenthesis)?;
+
+    let object = self.parse_expression()?;
+
+    self.check_token_and_next(Token::RightParenthesis)?;
+
+    // 生成 OpWithEnter 字节码
+    self.bytecode.push(ByteCode {
+      op: EByteCodeop::OpWithEnter,
+      args: vec![],
+      line: 0,
+    });
+
+    let body = self.parse_statement()?;
+
+    // 生成 OpWithLeave 字节码
+    self.bytecode.push(ByteCode {
+      op: EByteCodeop::OpWithLeave,
+      args: vec![],
+      line: 0,
+    });
+
+    Ok(Statement::With(WithStatement {
+      object: Box::new(object),
+      body: Box::new(body)
+    }))
   }
 
   fn parse_return_statement(&mut self) -> JSIResult<Statement> {
